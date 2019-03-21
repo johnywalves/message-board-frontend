@@ -1,21 +1,25 @@
 const webpack = require('webpack')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
     entry: './src/index.jsx',
     mode: 'development',
     output: {
-        path: __dirname + '/public',
+        path: __dirname + '/build/',
         filename: './app.js'
     },
     devServer: {
         port: 8080,
-        contentBase: './public',
+        contentBase: './public/',
     },
     resolve: {
         extensions: ['.js', '.jsx'],
         alias: {
-            modules: __dirname + '/node_modules'
+            modules: __dirname + '/node_modules',
+            assets: __dirname + '/src/assets',
+            components: __dirname + '/src/components',
+            main: __dirname + '/src/main',
+            views: __dirname + '/src/views'
         }
     },
     module: {
@@ -30,16 +34,15 @@ module.exports = {
                 }
             }]
         },
-		{
-			test: /\.css$/,
-			use: [
-			  {
-				loader: MiniCssExtractPlugin.loader,
-				options: {publicPath: './public'}
-			  },
-			  "css-loader"
-			]
-		},
+        {
+            test: /\.css$/,
+            use: [
+                {
+                    loader: MiniCssExtractPlugin.loader
+                },
+                "css-loader"
+            ]
+        },
         {
             test: /\.woff|.woff2|.ttf|.eot|.svg*.*$/,
             use: [{
@@ -48,6 +51,6 @@ module.exports = {
         }]
     },
     plugins: [
-        new MiniCssExtractPlugin({filename: 'app.css', chunkFilename: "chunk.css"})
+        new MiniCssExtractPlugin({ filename: 'app.css', chunkFilename: "chunk.css" })
     ]
 }

@@ -1,6 +1,6 @@
 # Message Board (Client)
 
-Front-end para o Message Board em JavaScript com React<br>
+Front-end para o Message Board em JavaScript com React  
 Instalar os pacotes de dependência
 
 ```{shell}
