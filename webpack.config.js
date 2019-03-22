@@ -18,6 +18,7 @@ module.exports = {
             modules: __dirname + '/node_modules',
             assets: __dirname + '/src/assets',
             components: __dirname + '/src/components',
+            reducers: __dirname + '/src/reducers',
             main: __dirname + '/src/main',
             views: __dirname + '/src/views'
         }

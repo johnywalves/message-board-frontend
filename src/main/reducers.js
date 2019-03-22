@@ -1,9 +1,12 @@
-import HomeReducer, { initialState as initialStateHome } from 'views/home/home.reducer'
+import HomeReducer, { initialState as initialStateHome } from 'reducers/posts/posts.reducer'
+import LoginReducer, { initialState as initialStateLogin } from 'reducers/login/login.reducer'
 
 export const initialState = {
-    ['home']: initialStateHome
+    login: initialStateLogin,
+    posts: initialStateHome
 }
 
-export default (state, action) => ({
-    ['home']: HomeReducer(state['home'], action)
+export default ({ posts, login }, action) => ({
+    login: LoginReducer(login, action),
+    posts: HomeReducer(posts, action)
 })

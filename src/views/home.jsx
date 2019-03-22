@@ -1,23 +1,29 @@
 import React, { useEffect, useContext } from 'react'
 
+// Dicionaries
 import Strings from 'main/localization'
 import Style from 'assets/jss/default'
+
+// Access States and Dispatchs
 import { Store } from 'main/store'
-import { fetchPosts } from 'views/home/home.action'
+import { fetchPosts } from 'reducers/posts/posts.actions'
+
+// Components
+import QuickAdd from 'components/QuickAdd'
 
 export default props => {
 
     const { state, dispatch } = useContext(Store)
 
     useEffect(() => {
-        if (!state.home.list)
+        if (!state.posts.list)
             fetchPosts(state, dispatch)
     })
 
     const renderPosts = list => {
         return (list || [])
             .map(post => (
-                <div key={post.id}>
+                <div key={post.id} style={Style.post}>
                     <p>{post.text}</p>
                     <ul>
                         {renderTags(post.tags)}
@@ -34,9 +40,12 @@ export default props => {
     }
 
     return (
-        <div>
-            <h1 style={Style.title} >{Strings.home}</h1>
-            {renderPosts(state.home.list)}
-        </div>
+        <React.Fragment>
+            <div>
+                <h1 style={Style.title}>{Strings.home}</h1>
+                {renderPosts(state.posts.list)}
+            </div>
+            <QuickAdd />
+        </React.Fragment>
     )
 }
