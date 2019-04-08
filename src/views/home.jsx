@@ -16,8 +16,9 @@ export default props => {
     const { state, dispatch } = useContext(Store)
 
     useEffect(() => {
-        if (!state.posts.list)
-            fetchPosts(state, dispatch)
+        console.log(Strings)
+        //if (!state.posts.list)
+        //    fetchPosts(state, dispatch)
     })
 
     const renderPosts = list => {
@@ -42,7 +43,7 @@ export default props => {
     return (
         <React.Fragment>
             <div>
-                <h1 style={Style.title}>{Strings.home}</h1>
+                <h1 style={Style.title}>{Strings.home.title}</h1>
                 {renderPosts(state.posts.list)}
             </div>
             <QuickAdd />

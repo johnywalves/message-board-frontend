@@ -6,6 +6,6 @@ import Style from 'assets/jss/default'
 
 export default props => (
     <div>
-        <h1 style={Style.title}>{Strings.about.title}</h1>
+        <h1 style={Style.title}>{Strings.login.idPlaceholder}</h1>
     </div>
 )
