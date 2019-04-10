@@ -22,16 +22,17 @@
     "css-loader": "^1.0.1",
     "file-loader": "^2.0.0",
     "font-awesome": "^4.7.0",
+    "jquery": "^3.4.0",
     "mini-css-extract-plugin": "^0.4.5",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-localization": "^1.0.13",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^3.2.1"
+    "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {}
 }

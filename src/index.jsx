@@ -8,5 +8,5 @@ ReactDOM.render(
     <StoreProvider>
         <App />
     </StoreProvider>,
-    document.getElementById('app')
+    document.getElementById('wrapper')
 )

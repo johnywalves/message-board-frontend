@@ -16,7 +16,6 @@ export default props => {
     const { state, dispatch } = useContext(Store)
 
     useEffect(() => {
-        console.log(Strings)
         //if (!state.posts.list)
         //    fetchPosts(state, dispatch)
     })
