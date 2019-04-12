@@ -20,6 +20,15 @@
     transition: all .4s ease 0s;
 }
 
+#menu-bars {
+    left: 85px;
+    top: 15px;
+    position: fixed;
+    font-size: 30px;
+    z-index: 11000;
+    transition: all .4s ease 0s;
+}
+
 .sidebar-nav {
     display: block;
     float: left;
@@ -44,11 +53,15 @@
     left: 150px;
 }
 
+#wrapper.active #menu-bars {
+    left: 165px;
+}
+
 #page-content-wrapper {
     width: 100%;
 }
 
-#sidebar_menu li a, .sidebar-nav li a {
+#sidebar-menu li a, .sidebar-nav li a {
     color: #999;
     display: block;
     float: left;
@@ -142,6 +155,10 @@
     #wrapper.active #sidebar-wrapper {
         left: 150px;
         width: 150px;
+        transition: all .4s ease 0s;
+    }
+    #wrapper.active #menu-bars {
+        left: 150px;
         transition: all .4s ease 0s;
     }
 }

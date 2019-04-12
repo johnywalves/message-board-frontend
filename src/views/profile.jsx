@@ -2,10 +2,12 @@ import React from 'react'
 
 // Dicionaries
 import Strings from 'main/localization'
-import Style from 'assets/jss/default'
+
+// Components
+import Header from 'components/header'
 
 export default props => (
-    <div>
-        <h1 style={Style.title}>{Strings.profile.title}</h1>
-    </div>
+    <React.Fragment>
+        <Header terms={Strings.profile} />
+    </React.Fragment>
 )

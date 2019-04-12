@@ -12,13 +12,14 @@ import Profile from 'views/profile'
 export default props => (
     <HashRouter>
         <Switch>
-            <Route path='/home' component={Home} />
             <Route path='/about' component={About} />
             <Route path='/login' component={Login} />
             <Route path='/newpost' component={NewPost} />
             <Route path='/post' component={Post} />
             <Route path='/profile' component={Profile} />
-            <Redirect from='*' to='/home' />
+
+            <Route path='/' component={Home} />
+            <Redirect from='*' to='/' />
         </Switch>
     </HashRouter>
 )

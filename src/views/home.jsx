@@ -9,7 +9,8 @@ import { Store } from 'main/store'
 import { fetchPosts } from 'reducers/posts/posts.actions'
 
 // Components
-import QuickAdd from 'components/QuickAdd'
+import Header from 'components/header'
+import QuickAdd from 'components/quickAdd'
 
 export default props => {
 
@@ -41,10 +42,8 @@ export default props => {
 
     return (
         <React.Fragment>
-            <div>
-                <h1 style={Style.title}>{Strings.home.title}</h1>
-                {renderPosts(state.posts.list)}
-            </div>
+            <Header terms={Strings.home} />
+            {renderPosts(state.posts.list)}
             <QuickAdd />
         </React.Fragment>
     )

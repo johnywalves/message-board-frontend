@@ -18,11 +18,7 @@ export default props => {
             <Menu />
             <div id="page-content-wrapper">
                 <div className="page-content inset">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <Routes />
-                        </div>
-                    </div>
+                    <Routes />
                 </div>
             </div>
         </React.Fragment>
